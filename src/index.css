@@ -6,6 +6,30 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) { /* Small devices (phones) */
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) { /* Medium devices (tablets) */
+  body {
+    font-size: 16px; /* Adjust font size for medium screens */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) { /* Large devices (desktops) */
+  body {
+    font-size: 18px; /* Adjust font size for larger screens */
+  }
+}
+
+@media (min-width: 993px) { /* Extra large devices (large desktops) */
+  body {
+    font-size: 20px; /* Adjust font size for extra large screens */
+  }
 }

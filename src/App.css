@@ -1,6 +1,7 @@
 ul {
   list-style: none;
-  width: 400px;
+  width: 100%; /* Use percentage for responsiveness */
+  max-width: 400px; /* Limit max width */
 }
 
 .wrapper {
@@ -17,7 +18,8 @@ h1 {
 }
 
 .form {
-  width: 400px;
+  width: 100%; /* Use percentage for responsiveness */
+  max-width: 400px; /* Limit max width */
 }
 
 .form__input {
@@ -25,23 +27,65 @@ h1 {
   width: 100%;
   border-bottom: 1px dashed gray;
   padding-bottom: 10px;
-  height: 67px;
+  height: auto; /* Allow height to adjust based on content */
 }
 
 .form__edit-input {
   outline: none;
   border: none;
-  font-size: 20px;
+  font-size: 20px; /* Base font size */
   width: 90%;
 }
 
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+/* Responsive Styles */
+@media (max-width: 576px) { /* Small devices (phones) */
+  h1 {
+    font-size: 24px; /* Adjust heading size for smaller screens */
+    margin-bottom: 15px; /* Adjust margin */
+  }
+
+  .form__edit-input {
+    font-size: 16px; /* Adjust input font size for smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    padding-bottom: 5px; /* Adjust padding */
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) { /* Medium devices (tablets) */
+  h1 {
+    font-size: 28px; /* Adjust heading size for medium screens */
+    margin-bottom: 18px; /* Adjust margin */
+  }
+
+  .form__edit-input {
+    font-size: 18px; /* Adjust input font size for medium screens */
+    height: auto; /* Allow height to adjust based on content */
+    padding-bottom: 8px; /* Adjust padding */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) { /* Large devices (desktops) */
+  h1 {
+    font-size: 32px; /* Adjust heading size for larger screens */
+    margin-bottom: 20px; /* Maintain margin */
+  }
+
+ .form__edit-input {
+    font-size: 20px; /* Maintain input font size for larger screens */
+    height: auto; /* Allow height to adjust based on content */
+    padding-bottom:10px; /* Maintain padding */
+   }
+}
+
+@media (min-width:993px) { /* Extra large devices (large desktops) */
+   h1 {
+      font-size:36px; /* Increase heading size for extra large screens */
+      margin-bottom :25px; /* Maintain margin*/
+   }
+
+   .form__edit-input {
+      font-size :22px ; /* Increase input font size for extra large screens*/
+      height:auto ; /* Allow height to adjust based on content*/
+      padding-bottom :12px ; /* Adjust padding*/
+   }
 }
